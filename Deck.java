@@ -15,12 +15,10 @@ public class Deck {
     numCards = 54;
 
     for (int i = 1; i <= 4; i++) {//for the suit
-      
       for (int j = 1; j <= 13; j++) {//for the values
-        Card myCard = new Card(j,i);
+        Card myCard = new Card(i,j);
         deck[indexCount++] = myCard;
       }
-
     }
     deck[52] = new Joker(1,5);
     deck[53] = new Joker(2,5);
@@ -71,21 +69,22 @@ public class Deck {
     }
 
   }
-  
-  
+
+  public int getNumCards(){
+
+    return numCards;
+  }
+}
    /*public static void main(String[] args) {
     Deck deck = new Deck();
     Card newCard = new Card(1, 1);
     Card newCard2 = new Card(2, 1);
     deck.addToDeck(newCard);
     deck.addToDeck(newCard2);
-    
+
     deck.dealCard();
     deck.dealCard();
     deck.printDeck();
   }
     */
 
-    //Deven's Deck.java
-
-}
