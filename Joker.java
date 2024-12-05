@@ -9,19 +9,14 @@ public class Joker extends Card{ // Kameryn Bermudez sect-5
         return "Joker";
 
     }
-    public String getValueAsString(){
+    public String getValueAsString() {
 
         return "";
 
     }
-    public String getNumString(){
-
-        return "joker";
-    
-    }
 
     public String toString(){
-        return "joker";
+        return "Joker";
     }
 
     

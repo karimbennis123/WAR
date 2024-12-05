@@ -1,6 +1,6 @@
 //Deven's Deck.java
 public class Deck {
-  
+
   private Card[] deck;
   private int numCards;
 
@@ -20,13 +20,13 @@ public class Deck {
         deck[indexCount++] = myCard;
       }
     }
-    deck[52] = new Joker(1,5);
-    deck[53] = new Joker(2,5);
+    deck[52] = new Joker(5,14);
+    deck[53] = new Joker(5,14);
 
   }
- 
+
   public void shuffle() {
-    for ( int i = deck.length-1; i > 0; i-- ) {
+    for ( int i = numCards - 1; i > 0; i-- ) {
       int rand = (int)(Math.random()*(i+1));
       Card temp = deck[i];
       deck[i] = deck[rand];
@@ -41,28 +41,28 @@ public class Deck {
   public Card dealCard() {
     if (numCards == 0) {
        System.out.println("Empty Deck!");
-      
-    } 
+
+    }
 
     return deck[--numCards];
 
   }
 
   public void addToDeck(Card card){
-    if (numCards > deck.length) {
-      System.out.println("error");
-      return;
-    } else {
-      deck[numCards] = card;
-      numCards++;
+
+    if(numCards < 54) {
+
+      deck[numCards++] = card;
     }
+
   }
 
   public void printDeck() {
     if (numCards == 0) {
       System.out.println("Empty Deck!");
-      
+
     } else {
+      System.out.println("---------------");
       for (int i = 0; i < numCards; i++) {
         System.out.println(deck[i]);
       }
